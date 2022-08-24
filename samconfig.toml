@@ -1,0 +1,10 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "spring-cloud-function-sample"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1xpcdwdjrhmyv"
+s3_prefix = "spring-cloud-function-sample"
+region = "ap-southeast-1"
+capabilities = "CAPABILITY_IAM"
+image_repositories = []

@@ -11,14 +11,15 @@ plugins {
     id("maven-publish")
 }
 
-subprojects {
+allprojects {
     apply(plugin = "java")
     apply(plugin = "idea")
     apply(plugin = "org.springframework.boot")
     apply(plugin = "io.spring.dependency-management")
-//    apply(plugin = "org.springframework.boot.experimental.thin-launcher")
     apply(plugin = "com.github.johnrengelman.shadow")
-//    apply(plugin = "maven-publish")
+
+    java.sourceCompatibility = org.gradle.api.JavaVersion.VERSION_11
+    java.targetCompatibility = org.gradle.api.JavaVersion.VERSION_11
 
     group = "com.blackdiz"
     version = "0.0.1-SNAPSHOT"

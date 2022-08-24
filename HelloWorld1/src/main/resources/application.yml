@@ -1,0 +1,10 @@
+spring:
+  profiles: uat
+
+testText: test uat
+
+---
+spring:
+  profiles: prod
+
+testText: test prod

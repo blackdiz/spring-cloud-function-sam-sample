@@ -1,5 +1,6 @@
 package com.blackdiz.demo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import utils.StringUtils;
@@ -7,7 +8,10 @@ import utils.StringUtils;
 import java.util.function.Function;
 
 @SpringBootApplication
-public class FunctionConfiguration {
+public class HelloWorld1 {
+
+  @Value("${testText}")
+  private String testText;
 
   /*
    * You need this main method (empty) or explicit <start-class>example.FunctionConfiguration</start-class>
@@ -22,6 +26,7 @@ public class FunctionConfiguration {
   public Function<String, String> processStatus() {
     return event -> {
       StringUtils.test();
+      System.out.println(testText);
       return event.toUpperCase();
     };
   }

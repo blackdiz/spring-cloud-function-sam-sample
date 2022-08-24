@@ -1,4 +1,4 @@
 rootProject.name = "demo"
-//include("HelloWorld2")
-//include("common")
-//include("HelloWorld1")
+include(":HelloWorld1")
+include(":HelloWorld2")
+include(":common")

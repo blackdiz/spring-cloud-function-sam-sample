@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import java.util.function.Function;
 
 @SpringBootApplication
-public class FunctionConfiguration {
+public class HelloWorld2 {
 
   /*
    * You need this main method (empty) or explicit <start-class>example.FunctionConfiguration</start-class>

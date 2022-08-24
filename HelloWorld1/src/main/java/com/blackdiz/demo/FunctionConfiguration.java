@@ -2,6 +2,7 @@ package com.blackdiz.demo;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import utils.StringUtils;
 
 import java.util.function.Function;
 
@@ -19,6 +20,9 @@ public class FunctionConfiguration {
 
   @Bean
   public Function<String, String> processStatus() {
-    return event -> event.toUpperCase();
+    return event -> {
+      StringUtils.test();
+      return event.toUpperCase();
+    };
   }
 }

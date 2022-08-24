@@ -1,19 +1,12 @@
 plugins {
-    id("java")
+    id("java")    
 }
-
-group = "com.blackdiz"
-version = "0.0.1-SNAPSHOT"
-
-repositories {
-    mavenCentral()
+dependencies { 
+    implementation(project(":common"))
+    
 }
-
-dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
-}
-
-tasks.getByName<Test>("test") {
-    useJUnitPlatform()
+tasks.withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
+    manifest {
+        attributes(mapOf("Main-Class" to "com.blackdiz.demo.FunctionConfiguration"))
+    }
 }
